@@ -1,0 +1,294 @@
+:root{
+  --black : #000;
+  --white : #fff;
+  --body : #eee;
+  --shadow : rgba(0,0,0,0.1);
+  --color : #ff3e3e;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+img{
+  display: block;
+}
+
+input {
+  font: inherit;
+  width: 100%;
+  border: none;
+}
+
+input:focus {
+  outline: 2px solid var(--color);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  appearance:         none;
+  -webkit-appearance: none;
+  margin: 0;
+}
+::selection{
+  color: var(--color);
+  background-color: var(--black);
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--black);
+  border-radius: 5rem;
+}
+.container {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--black);
+  border-bottom: 1px solid var(--shadow);
+  padding: 20px 60px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.heading i{
+  font-size: 40px;
+}
+
+.item-flex {
+  display: flex;
+  flex-grow: 1;
+}
+
+.checkout {
+  width: 70%;
+  padding: 40px 60px;
+  background: var(--white);
+  border-right: 1px solid 10px;
+}
+
+.section-heading {
+  color: var(--black);
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.payment-form { 
+  margin-bottom: 40px; 
+}
+
+.payment-method {
+  display:     flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.payment-method .method {
+  border: 1px solid var(--color);
+  border-radius: 10px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.payment-method .method i {
+  font-size: 20px; 
+}
+
+.input-default {
+  background: var(--body);
+  border-radius: 10px;
+  color: var(--black);
+}
+
+.payment-form input {
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.cardholder-name,.card-number {
+  margin-bottom: 20px;
+}
+
+.card-number input{ 
+  letter-spacing: 3px; 
+}
+
+.input-flex {
+  display:     flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.input-flex .expire-date{
+  width: 50%;
+}
+
+.expire-date .input-flex input { 
+  text-align: center; 
+}
+
+.btn { 
+  border-radius: var(--radius); 
+}
+
+.btn-primary {
+  background: var(--color);
+  font-weight: 500;
+  color: var(--white);
+  padding: 13px 45px;
+}
+
+.btn-primary b {
+  margin-right: 10px; 
+}
+
+.cart {
+  width: 40%;
+  display:         flex;
+  flex-direction:  column;
+  justify-content: flex-end;
+}
+
+.cart-item-box {
+  padding: 40px 60px;
+  margin-bottom: auto;
+}
+
+.product-card:not(:last-child) {
+  margin-bottom: 20px; 
+}
+
+.product-card .card {
+  position: relative;
+  display:     flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.card .product-img { border-radius: 10px; }
+
+.card .detail .product-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+
+.card .detail .wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.product-qty {
+  display:     flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-qty button {
+  background: var(--body);
+  width:  20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items:     center;
+}
+
+.product-qty button:active,.product-close-btn:active i { 
+  transform: scale(1); 
+}
+
+.product-qty button i {
+  --ionicon-stroke-width: 60px;
+  font-size: 10px;
+}
+
+.product-close-btn {
+  position: absolute;
+  top:   0;
+  right: 0;
+}
+
+.product-close-btn i {
+  font-size: 25px;
+  color: var(--black);
+}
+
+.product-close-btn:hover i {
+  color: var(--color);
+}
+
+.discount-token {
+  padding: 40px 60px;
+  border-top:    1px solid var(--shadow);
+  border-bottom: 1px solid var(--shadow);
+}
+
+.wrapper-flex {
+  display:     flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.wrapper-flex input {
+  padding: 12px 15px;
+  letter-spacing: 2px;
+}
+
+.btn-outline {
+  padding: 10px 25px;
+  border: 1px solid var(--color);
+  color: var(--black);
+}
+
+.amount { 
+  padding: 40px 60px;
+}
+
+.amount  div {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.amount .total {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--black);
+}
+
+.product-qty{
+  width: 20px;
+}
+.product-qty input:focus{
+  outline: 1px solid var(--black);
+}
